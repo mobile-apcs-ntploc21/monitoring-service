@@ -1,0 +1,14 @@
+apiVersion: apm.k8s.elastic.co/v1
+kind: ApmServer
+metadata:
+  name: quickstart
+  namespace: kube-logging
+spec:
+  version: 8.17.0
+  count: 1
+  elasticsearchRef:
+    name: quickstart
+    namespace: kube-logging
+  kibanaRef:
+    name: quickstart
+    namespace: kube-logging
