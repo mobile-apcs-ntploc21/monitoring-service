@@ -4,7 +4,7 @@ metadata:
   name: quickstart
   namespace: kube-logging
 spec:
-  version: 8.17.0
+  version: 8.7.0
   count: 1
   elasticsearchRef:
     name: quickstart
@@ -12,3 +12,9 @@ spec:
   kibanaRef:
     name: quickstart
     namespace: kube-logging
+  config:
+    apm-server.auth.secret_token: secrettokengoeshere
+  http:
+    service:
+      spec:
+        type: LoadBalancer
