@@ -12,3 +12,7 @@ spec:
   #   tls:
   #     selfSignedCertificate:
   #       disabled: true
+  http:
+    service:
+      spec:
+        type: LoadBalancer
